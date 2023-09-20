@@ -1,0 +1,66 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m{
+    height: 50px;
+    width: 250px;
+    border: 2px solid red;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.m::before{
+    content:"";
+    width: 150%;
+    height: 150%;
+    background-image: 
+    conic-gradient(
+    green 0deg,
+    green 45deg,
+    red 45deg,
+    red 90deg,
+    yellow 90deg,
+    yellow 135deg,
+    blue 135deg,
+    blue 180deg,
+    green 180deg,
+    green 225deg,
+    red 225deg,
+    red 270deg,
+    yellow 270deg,
+    yellow 315deg,
+    blue 315deg,
+    blue 360deg
+    
+    );
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    animation: rotate 1.5s linear infinite ;
+}
+.m::after{
+    content: "google";
+    position: absolute;
+    background: #fcfcfc;
+    margin: auto;
+    bottom: .5%;
+    right: .5%;
+    left: .5%;
+    top: 5%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}

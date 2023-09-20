@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(1, 0, 15);
+    background-image: url(bg.png);
+    background-size: 15cm 20CM;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400vh;
+    color: white;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    filter: contrast(110%) brightness(190%);
+}
+.txt{
+    position:absolute;
+    top:230px;
+    transform: translateX(0px);
+    letter-spacing: 3px;
+    font: 700 50px 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    color:transparent;
+}
+.txt::after,::before{
+    content: attr(data-text);
+    color: white;
+    filter: blur(0.02em);
+    position: absolute;
+    top: 0; left: 0;
+    pointer-events: none;
+    
+}
+/* kkkk */
+.txt::after{
+    mix-blend-mode: difference;
+}
+.main p{
+    font-size: 50px;
+}
+.main h1{
+    top: 310px;
+    transform: translateX(190px);
+}
+.main .dev{
+    top: 380px;
+    transform: translateX(190px);
+}

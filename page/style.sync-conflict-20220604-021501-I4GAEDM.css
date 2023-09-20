@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&family=Tapestry&display=swap');
+* {
+    font-size: 1.3rem;
+}
+
+html {
+    height: 5000px;
+    width: 800px;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Tapestry', cursive;
+}
+
+header {
+    background-color: rgba(15, 16, 68, 0.3);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(136, 243, 247)
+}
+
+header a:hover {
+    background-color: aquamarine;
+    color: black;
+    border-radius: 20%;
+}
+
+.myimg {
+    height: 15rem;
+    margin: 2rem 50% 4rem 50%;
+    border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15rem;
+    min-width: 100%;
+}
+
+.second {
+    margin: 0 1rem;
+   display: none;
+}
+
+.text {
+    font-size: 2rem;
+    background: -webkit-linear-gradient( 180deg, gold, orange, yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.first:hover+.second {
+    display: block;
+}
+
+#logo {
+    font-family: 'Tangerine', cursive;
+    position: absolute;
+    transform: translatex(-250%) translateY(120%);
+    -webkit-transform: translatex(-250%) translateY(120%);
+    -moz-transform: translatex(-250%) translateY(120%);
+    -ms-transform: translatex(-250%) translateY(120%);
+    -o-transform: translatex(-250%) translateY(120%);
+    color: rgb(245, 7, 245);
+    font-weight: 900;
+    text-shadow: 10px 20px rgb(124, 3, 3);
+}

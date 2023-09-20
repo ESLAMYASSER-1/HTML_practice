@@ -1,0 +1,50 @@
+.main{
+    width: 50%;
+    height: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    top: 30%;
+    left: 25%;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+div p {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: 3rem;
+}
+div input{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    color: gold;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 3px 3px 10px 5px pink;
+    font-weight:900;
+    font-size: 1.5rem;
+}
+#one{
+    background-color: rgb(211,211,211);
+    height: 2000px;
+}
+#two{
+   background-color: yellow;
+    height: 2000px; 
+}
+#a1{
+    position: fixed;
+    bottom: 35px;
+    right: 10px;
+}
+#a2{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}

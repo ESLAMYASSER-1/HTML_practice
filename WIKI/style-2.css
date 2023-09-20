@@ -1,0 +1,245 @@
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+@font-face {
+    font-family: "cyberfont";
+    src: url("/fonts/cyberfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "cubed";
+    src: url("/fonts/hemicube-font/HemicubePersonalUseOnly-jEm60.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "evolution";
+    src: url("/fonts/zilap-evolution-font/ZilapEvolution-55ZV.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "dailymirror";
+    src: url("fonts/dailymirror/DailymirrorPersonalUseRegular-7B7gP.ttf") format("truetype");
+}
+
+:root {
+    --maincolor: #0C2D48;
+    --seconcolor: #145DA0;
+    --thirdcolor: #2E8BC0;
+    --lastcolor: #B1D4E0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--maincolor);
+    background-image: url(bg.png);
+    background-size: 50vw 100vh;
+    background-repeat: no-repeat;
+    background-position-x: -80px;
+    width: 100%;
+    height: 400vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/*HEADER */
+header {
+    align-self: flex-end;
+    width: 70%;
+    margin: 20px 0;
+
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+header ul li {
+    display: block;
+}
+
+header ul li a {
+    text-decoration: none;
+    animation: headerlinkclr 4s infinite cubic-bezier(0.2, .6, 0.9, 1.2);
+    font-weight: 600;
+    font-size: 25px;
+    font-family: "cyberfont", sans-serif;
+}
+
+header ul li:hover a {
+    color: var(--thirdcolor);
+    animation: none;
+    background-color: rgb(24, 23, 23);
+    border-radius: 40%;
+    border: 3px double rgb(238, 232, 232);
+    animation: headerlinkhvrbrdrclr 4s infinite cubic-bezier(0.2, .6, 0.9, 1.2);
+    padding: 7px;
+}
+
+@keyframes headerlinkclr {
+    0% {
+        color: tomato;
+    }
+
+    50% {
+        color: rebeccapurple;
+    }
+
+    100% {
+        color: lightblue;
+    }
+}
+
+@keyframes headerlinkhvrbrdrclr {
+    0% {
+        border-color: tomato;
+        font-size: 25px;
+    }
+
+    50% {
+        border-color: rebeccapurple;
+        font-size: 27.5px;
+    }
+
+    100% {
+        border-color: lightblue;
+        font-size: 30px;
+    }
+}
+
+/* welcom text*/
+main {
+    position: relative;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.console-container {
+
+    font-family: Khula;
+    font-size: 4em;
+    text-align: center;
+    height: 270px;
+    width: 600px;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 20vh;
+    left: 30vw;
+    margin: auto;
+    transform: translate(20px, -20px);
+}
+
+.console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
+}
+
+/* new info section */
+section {
+    position: absolute;
+    top: 100vh;
+    display: flex;
+    background-color: var(--seconcolor);
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+section .topicspan {
+    font-weight: 600;
+    font-size: 25px;
+    font-family: "cubed", sans-serif;
+    margin: 10px;
+}
+
+section .topics {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section .topics .topic {
+    width: 20vw;
+    height: 60vh;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 2px solid var(--lastcolor);
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 2.5px 2.5px 5px 2px var(--lastcolor);
+    transition: all 0.3s ease-in-out;
+}
+
+section .topics .topic:hover {
+    box-shadow: 5px 5px 10px 4px var(--lastcolor);
+    transform: translate3d(-5px, -5px, 5px)
+}
+
+section .topics .topic .topicimg {
+    background-color: #030c15;
+    overflow: hidden;
+}
+
+section .topics .topic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    transition: all .4s;
+    filter: grayscale(100%);
+}
+
+.topicimg {
+    padding: 0;
+    margin: 0;
+}
+
+section .topics .topic:hover img {
+    transform: scale(1.1) rotate(5deg);
+    filter: grayscale(0);
+}
+
+section .topics .topic div {
+    width: 100%;
+    height: 50%;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: "dailymirror", sans-serif;
+    color: black;
+    margin: 0 10px;
+    margin-left: 0;
+    padding: 0 10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+section .topics .topic div div {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+section .topics .topic div div a {
+    text-decoration: none;
+    color: var(--lastcolor);
+}
